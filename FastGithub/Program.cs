@@ -14,6 +14,8 @@ namespace FastGithub
         public static void Main(string[] args)
         {
             ConsoleUtil.DisableQuickEdit();
+
+            //ConsoleUtil.CheckQuickEditMode();
             var contentRoot = Path.GetDirectoryName(Environment.ProcessPath);
             if (string.IsNullOrEmpty(contentRoot) == false)
             {

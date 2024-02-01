@@ -40,5 +40,30 @@ namespace FastGithub
 
             return false;
         }
+        public static void CheckQuickEditMode()
+        {
+
+            var hwnd = GetStdHandle(STD_INPUT_HANDLE);
+            uint mode;
+            if (!GetConsoleMode(hwnd, out mode))
+            {
+                // 获取控制台窗口模式失败
+            }
+            else if ((mode & ENABLE_QUICK_EDIT) != 0)
+            {
+                // 控制台窗口被其他进程重新打开
+            }
+
+            //var hwnd = GetStdHandle(STD_INPUT_HANDLE);
+            //uint mode;
+            //if (GetConsoleMode(hwnd, out mode))
+            //{
+            //    if ((mode & ENABLE_QUICK_EDIT) != 0)
+            //    {
+            //        // 控制台窗口被其他进程重新打开
+            //    }
+            //}
+        }
+
     }
 }

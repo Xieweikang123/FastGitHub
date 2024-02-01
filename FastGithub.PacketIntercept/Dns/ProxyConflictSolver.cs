@@ -122,6 +122,7 @@ namespace FastGithub.PacketIntercept.Dns
                 if (proxyServer != null)
                 {
                     this.logger.LogError($"由于系统设置了代理{proxyServer}，{nameof(FastGithub)}无法加速{domain}");
+                    break;
                 }
             }
         }
