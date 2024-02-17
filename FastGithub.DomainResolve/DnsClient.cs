@@ -92,7 +92,7 @@ namespace FastGithub.DomainResolve
             if (cryptDns != null)
             {
                 yield return cryptDns;
-                yield return cryptDns;
+                //yield return cryptDns;
             }
 
             foreach (var dns in this.fastGithubConfig.FallbackDns)
